@@ -20,3 +20,7 @@ const linodeGet = (url, params = {}) => {
     });
 }
 
+const linodeAccountView = async () => {
+    return await linodeGet('https://api.linode.com/v4/account');
+}
+
