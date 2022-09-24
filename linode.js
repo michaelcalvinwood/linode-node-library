@@ -24,3 +24,9 @@ const linodeAccountView = async () => {
     return await linodeGet('https://api.linode.com/v4/account');
 }
 
+const linodeRegionsList = async () => {
+    return await linodeGet(' https://api.linode.com/v4/regions');
+}
+
+
+test();
