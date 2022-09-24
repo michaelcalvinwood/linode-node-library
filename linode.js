@@ -28,5 +28,16 @@ const linodeRegionsList = async () => {
     return await linodeGet(' https://api.linode.com/v4/regions');
 }
 
+const linodeList = async (page = 1, page_size = 100) => {
+    return await linodeGet('https://api.linode.com/v4/linode/instances', {
+        page,
+        page_size
+    })
+}
+
+const test = async () => {
+    let list = await linodeRegionsList();
+    console.log(list);
+}
 
 test();
